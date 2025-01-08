@@ -1,6 +1,6 @@
 import "../styles/cv.css";
 
-function Cv({ name }) {
+function Cv({ name, title }) {
   if (!name) {
     name = "Your Name";
   }
@@ -8,6 +8,7 @@ function Cv({ name }) {
     <div className="cv-body">
       <div className="cv-sheet">
         <h1>{name}</h1>
+        <h2>{title}</h2>
       </div>
     </div>
   );
