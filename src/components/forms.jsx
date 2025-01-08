@@ -1,6 +1,6 @@
 import "../styles/forms.css";
 
-function Forms({ name = "Enter your full name", handleEdit }) {
+function Forms({handleEdit }) {
   return (
     <div className="forms-body">
       <form>
@@ -9,7 +9,7 @@ function Forms({ name = "Enter your full name", handleEdit }) {
           type="text"
           id="nameLabel"
           className="nameInput"
-          placeholder={name}
+          placeholder="Enter your full name"
           onChange={handleEdit}
         />
       </form>
