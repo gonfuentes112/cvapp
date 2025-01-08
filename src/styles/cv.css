@@ -1,4 +1,5 @@
 .cv-body {
     grid-column: 2;
     background-color: darkgray;
+    max-width: 100%;
   }
