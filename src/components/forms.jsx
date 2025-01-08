@@ -1,5 +1,6 @@
+import "../styles/forms.css";
 function Forms() {
-    return <div></div>
+  return <div className="forms-body"></div>;
 }
 
-export default Forms
+export default Forms;
