@@ -1,7 +1,9 @@
 import "../styles/cv.css";
 
-function Cv() {
-  return <div className="cv-body"></div>;
+function Cv({name}) {
+  return <div className="cv-body">
+        <h1>{name}</h1>
+  </div>;
 }
 
 export default Cv;
