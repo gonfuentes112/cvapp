@@ -1,4 +1,16 @@
 .forms-body {
     grid-column: 1;
     background-color: darkviolet;
+    width: 100%;
   }
+
+.forms-body form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  width: 30%;
+  background-color: black;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
