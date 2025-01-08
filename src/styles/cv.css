@@ -2,4 +2,13 @@
     grid-column: 2;
     background-color: darkgray;
     max-width: 100%;
+    display: flex;
+    justify-content: center;
   }
+
+.cv-sheet {
+  background-color: white;
+  min-width: 90%;
+  min-height: 90%;
+  margin: 1rem;
+}
