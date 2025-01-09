@@ -53,13 +53,24 @@ function App() {
     ]);
   }
 
+  function removeJobForm(id) {
+    setJobForms(
+      jobForms.filter((form) => {
+        return form.id != id;
+      })
+    );
+  }
+
   return (
     <>
       <Forms handleEdit={handleEdit} validEmail={validEmail}>
-      <Jobforms addJobForm={addJobForm} jobForms={jobForms}/>
+        <Jobforms
+          addJobForm={addJobForm}
+          jobForms={jobForms}
+          removeJobForm={removeJobForm}
+        />
       </Forms>
       <Cv headerContent={headerContent}></Cv>
-
     </>
   );
 }

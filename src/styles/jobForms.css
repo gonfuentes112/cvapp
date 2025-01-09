@@ -1,32 +1,45 @@
-.job-forms-container{
-    width: 80%;
-    border-radius: 0.5rem;
+.job-forms-container {
+  width: 80%;
+  border-radius: 0.5rem;
 }
 .jobsHeader {
-    background-color: black;
-    border-radius: 0.5rem 0.5rem 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    font-size: 2rem;
+  background-color: black;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
 }
 
 .jobsHeader button {
-    font-size: 2rem;
-    padding: 0.5rem;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.removeJobHeader {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: red;
+}
+
+.removeJobHeader button {
+  color: red;
 }
 
 .job-forms-container form {
-    width: 100%;
-    padding-bottom: 1rem;
-    border-radius: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-radius: 0;
 }
 
 .job-forms-container form:last-child {
-    border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 textarea {
-    color: white;
+  color: white;
 }
