@@ -1,4 +1,3 @@
-import '../styles/email.css';
 function Email({email}) {
     return <div className='emailContainer'>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

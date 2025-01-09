@@ -1,34 +1,54 @@
 import "../styles/forms.css";
 
-function Forms({handleEdit, validEmail }) {
+function Forms({ handleEdit, validEmail }) {
   return (
     <div className="forms-body">
       <form>
-        <label htmlFor="nameLabel">Name</label>
+        <label htmlFor="nameInput">Full Name</label>
         <input
           type="text"
-          id="nameLabel"
+          id="nameInput"
           className="nameInput"
           placeholder="Enter your full name"
           onChange={handleEdit}
         />
-        <label htmlFor="titleLabel">Job Title</label>
+        <label htmlFor="titleInput">Job Title</label>
         <input
           type="text"
-          id="titleLabel"
+          id="titleInput"
           className="titleInput"
           placeholder="Enter your job title"
           onChange={handleEdit}
         />
-      <label htmlFor="emailLabel">Email</label>
+        <label htmlFor="emailInput">Email</label>
         <input
           type="email"
-          id="emailLabel"
+          id="emailInput"
           className="emailInput"
           placeholder="your-email@example.com"
           onChange={handleEdit}
         />
-        {!validEmail && <div className="valError">Enter a valid email: your-email@example.com</div>}
+        {!validEmail && (
+          <div className="valError">
+            Enter a valid email: your-email@example.com
+          </div>
+        )}
+        <label htmlFor="phoneInput">Phone Number</label>
+        <input
+          type="phone"
+          id="phoneInput"
+          className="phoneInput"
+          placeholder="##-####-####"
+          onChange={handleEdit}
+        />
+        <label htmlFor="githubInput">Your Github Repo</label>
+        <input
+          type="text"
+          id="githubInput"
+          className="githubInput"
+          placeholder="https://github.com/yourrepo"
+          onChange={handleEdit}
+        />
       </form>
     </div>
   );

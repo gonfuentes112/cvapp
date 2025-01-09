@@ -8,7 +8,8 @@ function App() {
   const [title, setTitle] = useState("");
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(true);
-  // const [phone, setPhone] = useState('')
+  const [phone, setPhone] = useState("");
+  const [github, setGithub] = useState("");
 
   function handleEdit(e) {
     const target = e.target;
@@ -18,12 +19,20 @@ function App() {
       setEmail(target.value);
       setValidEmail(target.validity.valid);
     }
+    if (target.className.includes("phoneInput")) setPhone(target.value);
+    if (target.className.includes("githubInput")) setGithub(target.value);
   }
 
   return (
     <>
       <Forms handleEdit={handleEdit} validEmail={validEmail}></Forms>
-      <Cv name={name} title={title} email={email} ></Cv>
+      <Cv
+        name={name}
+        title={title}
+        email={email}
+        phone={phone}
+        github={github}
+      ></Cv>
     </>
   );
 }
