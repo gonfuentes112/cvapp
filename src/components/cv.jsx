@@ -4,8 +4,10 @@ import Phone from "./phone";
 import Github from "./github";
 
 function Cv({ headerContent }) {
-const {title, email, phone, github} = headerContent
-let name = headerContent.name;
+  let name = headerContent.name;
+  const { title, contactInfo } = headerContent;
+  const [email, phone, github] = contactInfo;
+
   if (!name) {
     name = "Your Name";
   }
@@ -16,7 +18,9 @@ let name = headerContent.name;
         <h2>{title}</h2>
         <div className="contact-info">
           {email && <Email email={email} />}
+          {email && phone && "|"}
           {phone && <Phone phone={phone} />}
+          {phone && github && "|"}
           {github && <Github github={github} />}
         </div>
       </div>

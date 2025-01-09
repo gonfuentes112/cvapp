@@ -26,9 +26,7 @@ function App() {
   const headerContent = {
     name: name,
     title: title,
-    email: email,
-    phone: phone,
-    github: github,
+    contactInfo: [email, phone, github]
   };
 
   return (
