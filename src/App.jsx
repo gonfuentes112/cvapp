@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Forms from "./components/forms";
 import Cv from "./components/cv";
+import Jobforms from "./components/jobForms";
 
 function App() {
   const [name, setName] = useState("");
@@ -26,13 +27,39 @@ function App() {
   const headerContent = {
     name: name,
     title: title,
-    contactInfo: [email, phone, github]
+    contactInfo: [email, phone, github],
   };
+
+  const [jobForms, setJobForms] = useState([
+    {
+      id: self.crypto.randomUUID(),
+      jobTitle: "",
+      startDate: "",
+      endDate: "",
+      jobDesc: "",
+    },
+  ]);
+
+  function addJobForm() {
+    setJobForms([
+      ...jobForms,
+      {
+        id: self.crypto.randomUUID(),
+        jobTitle: "",
+        startDate: "",
+        endDate: "",
+        jobDesc: "",
+      },
+    ]);
+  }
 
   return (
     <>
-      <Forms handleEdit={handleEdit} validEmail={validEmail}></Forms>
+      <Forms handleEdit={handleEdit} validEmail={validEmail}>
+      <Jobforms addJobForm={addJobForm} jobForms={jobForms}/>
+      </Forms>
       <Cv headerContent={headerContent}></Cv>
+
     </>
   );
 }

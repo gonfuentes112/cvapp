@@ -1,9 +1,10 @@
 import "../styles/forms.css";
 
-function Forms({ handleEdit, validEmail }) {
+function Forms({ handleEdit, validEmail, children }) {
   return (
     <div className="forms-body">
-      <form>
+        <div className="contact-info-forms">
+        <form>
         <label htmlFor="nameInput">Full Name</label>
         <input
           type="text"
@@ -50,6 +51,9 @@ function Forms({ handleEdit, validEmail }) {
           onChange={handleEdit}
         />
       </form>
+        </div>
+
+      {children}
     </div>
   );
 }
