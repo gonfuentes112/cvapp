@@ -61,6 +61,14 @@ function App() {
     );
   }
 
+  function handleChangeJobs(id, target, value) {
+    setJobForms(
+      jobForms.map((form) => {
+        return form.id === id ? { ...form, [target]: value } : form;
+      })
+    );
+  }
+
   return (
     <>
       <Forms handleEdit={handleEdit} validEmail={validEmail}>
@@ -68,9 +76,10 @@ function App() {
           addJobForm={addJobForm}
           jobForms={jobForms}
           removeJobForm={removeJobForm}
+          handleChange={handleChangeJobs}
         />
       </Forms>
-      <Cv headerContent={headerContent}></Cv>
+      <Cv headerContent={headerContent} jobForms={jobForms}></Cv>
     </>
   );
 }

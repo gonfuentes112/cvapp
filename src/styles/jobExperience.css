@@ -1,0 +1,13 @@
+.job-experience-item {
+  margin-left: 1rem;
+}
+
+.job-experience-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.job-experience-dates {
+  font-style: italic;
+  font-size: 0.7rem;
+}
