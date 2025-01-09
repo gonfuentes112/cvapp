@@ -23,16 +23,18 @@ function App() {
     if (target.className.includes("githubInput")) setGithub(target.value);
   }
 
+  const headerContent = {
+    name: name,
+    title: title,
+    email: email,
+    phone: phone,
+    github: github,
+  };
+
   return (
     <>
       <Forms handleEdit={handleEdit} validEmail={validEmail}></Forms>
-      <Cv
-        name={name}
-        title={title}
-        email={email}
-        phone={phone}
-        github={github}
-      ></Cv>
+      <Cv headerContent={headerContent}></Cv>
     </>
   );
 }

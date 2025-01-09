@@ -3,7 +3,9 @@ import Email from "./email";
 import Phone from "./phone";
 import Github from "./github";
 
-function Cv({ name, title, email, phone, github }) {
+function Cv({ headerContent }) {
+const {title, email, phone, github} = headerContent
+let name = headerContent.name;
   if (!name) {
     name = "Your Name";
   }
