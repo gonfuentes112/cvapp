@@ -39,3 +39,16 @@
   .ed-forms-container form:last-child {
     border-radius: 0 0 0.5rem 0.5rem;
   }
+
+  @media screen and (max-width: 600px) {
+    .edHeader {
+        font-size: 0.8rem;
+    }
+    .edHeader button {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+    .remove-ed-text {
+        display: none;
+    }
+}

@@ -1,12 +1,12 @@
-import "../styles/jobExperience.css";
+import "../styles/experience.css";
 function JobExperience({ form }) {
   return (
-    <div className="job-experience-item">
-      <div className="job-experience-title">{form.jobTitle}</div>
-      <div className="job-experience-dates">
+    <div className="experience-item">
+      <div className="experience-title">{form.jobTitle}</div>
+      <div className="experience-dates">
         {form.startDate} - {form.endDate}
       </div>
-      <div className="job-experience-desc">{form.jobDesc}</div>
+      <div className="experience-desc">{form.jobDesc}</div>
     </div>
   );
 }

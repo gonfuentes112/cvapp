@@ -39,3 +39,16 @@
 .job-forms-container form:last-child {
   border-radius: 0 0 0.5rem 0.5rem;
 }
+
+@media screen and (max-width: 600px) {
+    .jobsHeader {
+        font-size: 0.8rem;
+    }
+    .jobsHeader button {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+    .remove-job-text {
+        display: none;
+    }
+}

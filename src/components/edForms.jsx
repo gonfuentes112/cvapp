@@ -13,7 +13,7 @@ function Edforms({ addEdForm, edForms, removeEdForm, handleChangeEd }) {
         {edForms.map((form) => (
           <form key={form.id}>
             <div className="removeEdHeader">
-              Remove this Education
+              <div className="remove-ed-text">Remove this Education</div>
               <button type="button" onClick={() => removeEdForm(form.id)}>
                 X
               </button>

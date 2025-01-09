@@ -124,7 +124,11 @@ function App() {
           handleChangeEd={handleChangeEd}
         />
       </Forms>
-      <Cv headerContent={headerContent} jobForms={jobForms}></Cv>
+      <Cv
+        headerContent={headerContent}
+        jobForms={jobForms}
+        edForms={edForms}
+      ></Cv>
     </>
   );
 }

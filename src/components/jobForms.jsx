@@ -13,7 +13,7 @@ function Jobforms({ addJobForm, jobForms, removeJobForm, handleChangeJobs }) {
         {jobForms.map((form) => (
           <form key={form.id}>
             <div className="removeJobHeader">
-              Remove this job
+              <div className="remove-job-text">Remove this job</div>
               <button type="button" onClick={() => removeJobForm(form.id)}>
                 X
               </button>
