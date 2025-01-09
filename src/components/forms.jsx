@@ -1,6 +1,6 @@
 import "../styles/forms.css";
 
-function Forms({handleEdit }) {
+function Forms({handleEdit, validEmail }) {
   return (
     <div className="forms-body">
       <form>
@@ -20,6 +20,15 @@ function Forms({handleEdit }) {
           placeholder="Enter your job title"
           onChange={handleEdit}
         />
+      <label htmlFor="emailLabel">Email</label>
+        <input
+          type="email"
+          id="emailLabel"
+          className="emailInput"
+          placeholder="your-email@example.com"
+          onChange={handleEdit}
+        />
+        {!validEmail && <div className="valError">Enter a valid email: your-email@example.com</div>}
       </form>
     </div>
   );

@@ -4,6 +4,7 @@
     max-width: 100%;
     display: flex;
     justify-content: center;
+    color: black;
   }
 
 .cv-sheet {
@@ -19,7 +20,6 @@
 .cv-sheet h1 {
   font-family: 'Calibri', sans-serif;
   font-size: 3rem;
-  color: black;
 }
 
 .cv-sheet h2 {

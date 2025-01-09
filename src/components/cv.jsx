@@ -1,6 +1,7 @@
 import "../styles/cv.css";
+import Email from "./email";
 
-function Cv({ name, title }) {
+function Cv({ name, title, email }) {
   if (!name) {
     name = "Your Name";
   }
@@ -9,6 +10,7 @@ function Cv({ name, title }) {
       <div className="cv-sheet">
         <h1>{name}</h1>
         <h2>{title}</h2>
+        {email && <Email email={email}/>}
       </div>
     </div>
   );
