@@ -3,6 +3,7 @@ import "./App.css";
 import Forms from "./components/forms";
 import Cv from "./components/cv";
 import Jobforms from "./components/jobForms";
+import Edforms from "./components/edForms";
 
 function App() {
   const [name, setName] = useState("");
@@ -69,6 +70,44 @@ function App() {
     );
   }
 
+  const [edForms, setEdForms] = useState([
+    {
+      id: self.crypto.randomUUID(),
+      edTitle: "",
+      startDate: "",
+      endDate: "",
+      edDesc: "",
+    },
+  ]);
+
+  function addEdForm() {
+    setEdForms([
+      ...edForms,
+      {
+        id: self.crypto.randomUUID(),
+        edTitle: "",
+        startDate: "",
+        endDate: "",
+        edDesc: "",
+      },
+    ]);
+  }
+
+  function removeEdForm(id) {
+    setEdForms(
+      edForms.filter((form) => {
+        return form.id != id;
+      })
+    );
+  }
+
+  function handleChangeEd(id, target, value) {
+    setEdForms(
+      edForms.map((form) => {
+        return form.id === id ? { ...form, [target]: value } : form;
+      })
+    );
+  }
   return (
     <>
       <Forms handleEdit={handleEdit} validEmail={validEmail}>
@@ -76,7 +115,13 @@ function App() {
           addJobForm={addJobForm}
           jobForms={jobForms}
           removeJobForm={removeJobForm}
-          handleChange={handleChangeJobs}
+          handleChangeJobs={handleChangeJobs}
+        />
+        <Edforms
+          addEdForm={addEdForm}
+          edForms={edForms}
+          removeEdForm={removeEdForm}
+          handleChangeEd={handleChangeEd}
         />
       </Forms>
       <Cv headerContent={headerContent} jobForms={jobForms}></Cv>

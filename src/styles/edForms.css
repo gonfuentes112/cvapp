@@ -1,0 +1,41 @@
+.ed-forms-container {
+    width: 80%;
+    border-radius: 0.5rem;
+  }
+  .edHeader {
+    background-color: black;
+    border-radius: 0.5rem 0.5rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+  }
+  
+  .edHeader button {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  
+  .removeEdHeader {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.8rem;
+    color: red;
+  }
+  
+  .removeEdHeader button {
+    color: red;
+  }
+  
+  .ed-forms-container form {
+    width: 100%;
+    padding-bottom: 1rem;
+    border-radius: 0;
+  }
+  
+  .ed-forms-container form:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
